@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "e85b5ad7-65cc-4b3e-970a-8139368774f6",
+		"name": "Movimientos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9826902"
+	},
+	"item": [
+		{
+			"name": "Crear",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Transfer-Encoding",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Alba Escobar\",\r\n    \"genero\":\"Femenino\",\r\n    \"edad\":34,\r\n    \"identificacion\":\"0201952890\",\r\n    \"direccion\":\"Quito\",\r\n    \"telefono\":\"0992339021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/persona",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"persona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/persona",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"persona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Transfer-Encoding",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Klever Ivan Escobar\",\r\n    \"genero\":\"Masculino\",\r\n    \"edad\":39,\r\n    \"identificacion\":\"0201952890\",\r\n    \"direccion\":\"Sangolqui\",\r\n    \"telefono\":\"0992339021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/persona/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"persona",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/movimientos/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"movimientos",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reporte",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/reportes/1/reporteMovimientosCuenta?fechaInicial=2024-09-19&fechaFinal=2024-09-19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"reportes",
+						"1",
+						"reporteMovimientosCuenta"
+					],
+					"query": [
+						{
+							"key": "fechaInicial",
+							"value": "2024-09-19"
+						},
+						{
+							"key": "fechaFinal",
+							"value": "2024-09-19"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
